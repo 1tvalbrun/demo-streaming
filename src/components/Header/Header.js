@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonText: {
     color: '#fff',
+    cursor: 'pointer',
   },
   link: {
     color: '#fff',
@@ -63,7 +64,7 @@ const Header = () => {
         <Link to='login' className={classes.link}>
           <Typography variant='h6'>Log in</Typography>
         </Link>
-        <Link to='/signup' className={classes.button}>
+        <Link className={classes.button}>
           <Button className={classes.buttonText}>Start your free trail</Button>
         </Link>
       </Toolbar>

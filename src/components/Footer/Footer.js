@@ -45,11 +45,7 @@ const Footer = () => {
           {footerLinks.map((link) =>
             link.title !== 'Manage Account' ? (
               <Grid item key={link.title}>
-                <Link
-                  className={classes.footerLink}
-                  href={link.url}
-                  variant='h5'
-                >
+                <Link className={classes.footerLink} variant='h5'>
                   {` ${link.title}`} |
                 </Link>
               </Grid>

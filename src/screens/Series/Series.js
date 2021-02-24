@@ -13,6 +13,7 @@ import { fetchPrograms } from '../../actions/programActions';
 
 const useStyles = makeStyles((theme) => ({
   grid: {
+    cursor: 'pointer',
     padding: theme.spacing(1),
     maxWidth: 200,
   },
@@ -79,22 +80,20 @@ const Series = () => {
           .map((program) => (
             <Grid item className={classes.grid}>
               <Card>
-                <Link to={`/${program.title}`} className={classes.link}>
-                  <CardMedia
-                    component='img'
-                    alt={program.title}
-                    className={classes.media}
-                    image={program.images['Poster Art'].url}
-                    title={program.title}
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography className={classes.title}>
-                      {program.title.length > 20
-                        ? `${program.title.slice(0, 20)}...`
-                        : program.title}
-                    </Typography>
-                  </CardContent>
-                </Link>
+                <CardMedia
+                  component='img'
+                  alt={program.title}
+                  className={classes.media}
+                  image={program.images['Poster Art'].url}
+                  title={program.title}
+                />
+                <CardContent className={classes.cardContent}>
+                  <Typography className={classes.title}>
+                    {program.title.length > 20
+                      ? `${program.title.slice(0, 20)}...`
+                      : program.title}
+                  </Typography>
+                </CardContent>
               </Card>
             </Grid>
           ))
